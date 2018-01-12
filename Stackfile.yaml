@@ -1,0 +1,28 @@
+project:
+  name: gooddog
+
+services:
+  - name: gooddjango
+    docker:
+      context: ./gooddjango
+  - name: frontend-primary
+    docker:
+      context: ./frontend/primary
+  - name: postgres
+    kubernetes:
+      manifest-file: ./postgres/kube-manifest.yaml
+  
+environments:
+  - name: dev
+    provider: local
+    secrets:
+      cache-password: true
+    deployments:
+      - service: gooddjango
+        replicas: 1
+        expose: true
+      - service: postgres
+        replicas: 1
+      - service: frontend-primary
+        replicas: 1
+        expose: true
