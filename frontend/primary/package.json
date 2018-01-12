@@ -1,0 +1,18 @@
+{
+  "name": "gooddog-primary",
+  "version": "0.0.1",
+  "description": "Primary website frontend for GoodDog",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^4.2.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
