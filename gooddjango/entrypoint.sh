@@ -4,7 +4,7 @@ set -ex
 # Change to working dir (mounted from host)
 cd /stack/gooddjango
 
-pipenv install
+# pipenv install
 
 pipenv --where
 pipenv --venv
